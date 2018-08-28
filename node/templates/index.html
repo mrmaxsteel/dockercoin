@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>DockerCoin Node Dashboard</title>
+</head>
+
+<body>
+    <h1>Welcome to the DockerCoin node dashboard</h1>
+    <tbody>
+        {% for row_index in range(address_list|count) %}
+        <tr>
+            <td>{{ address_list[row_index]['addr'] }}</td>
+            <td>{{ address_list[row_index]['timestamp']|tojson|safe }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</body>
+
+</html>
