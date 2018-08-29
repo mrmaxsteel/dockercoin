@@ -4,4 +4,5 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 ENV FLASK_APP="run.py"
-CMD [ "flask", "run", "--host=0.0.0.0" ]
+ENV NODE_ADDRESS="0.0.0.0:5000"
+ENTRYPOINT flask run --host=0.0.0.0

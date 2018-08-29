@@ -6,14 +6,14 @@
 
 <body>
     <h1>Welcome to the DockerCoin node dashboard</h1>
-    <tbody>
+    <table>
         {% for row_index in range(address_list|count) %}
         <tr>
             <td>{{ address_list[row_index]['addr'] }}</td>
             <td>{{ address_list[row_index]['timestamp']|tojson|safe }}</td>
         </tr>
         {% endfor %}
-    </tbody>
+    </table>
 
 </body>
 
