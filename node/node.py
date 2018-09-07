@@ -9,7 +9,6 @@ class DCNode:
     def __init__(self, address):
         self._node_address = address
         self.add_address(address)
-        self.add_address(address)
 
     def add_address(self, address):
         if True:
